@@ -20,27 +20,9 @@ protocols, classes, functions, macros, etc. that are part of the
 specification.
 
 @menu
-* Standards::
 * How CLIM Is Different::
+* Standards::
 @end menu
-
-@node Standards
-@section Standards
-
-This manual documents @mcclim{} @value{MCCLIMVERSION} which is a mostly
-complete implementation of the @clim{} 2.0 specification and its revision
-2.2. To our knowledge version 2.2 of the @clim{} specification is only
-documented in the ``CLIM 2 User's Guide'' by Franz. While that document
-is not a formal specification, it does contain many cleanups and is
-often clearer than the official specification; on the other hand, the
-original specification is a useful reference. This manual will note
-where @mcclim{} has followed the 2.2 API.
-@cindex specification
-
-Also, some protocols mentioned in the 2.0 specification, such as parts
-of the incremental redisplay protocol, are clearly internal to @clim{} and
-not well described.  It will be noted here when they are partially
-implemented in @mcclim{} or not implemented at all.
 
 @node How CLIM Is Different
 @section How CLIM Is Different
@@ -129,3 +111,21 @@ By using @clim{} as a mediator of command invocation and argument
 acquisition, you can obtain some very modular code.  Application logic
 is completely separate from interaction policies, and the two can evolve
 separately and independently.
+
+@node Standards
+@section Standards
+
+This manual documents @mcclim{} @value{MCCLIMVERSION} which is a mostly
+complete implementation of the @clim{} 2.0 specification and its revision
+2.2. To our knowledge version 2.2 of the @clim{} specification is only
+documented in the ``CLIM 2 User's Guide'' by Franz. While that document
+is not a formal specification, it does contain many cleanups and is
+often clearer than the official specification; on the other hand, the
+original specification is a useful reference. This manual will note
+where @mcclim{} has followed the 2.2 API.
+@cindex specification
+
+Also, some protocols mentioned in the 2.0 specification, such as parts
+of the incremental redisplay protocol, are clearly internal to @clim{} and
+not well described.  It will be noted here when they are partially
+implemented in @mcclim{} or not implemented at all.
