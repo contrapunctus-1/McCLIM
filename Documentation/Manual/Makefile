@@ -1,4 +1,4 @@
-SOURCES=mcclim.texi user-manual.texi reference-manual.texi developer-manual.texi extensions.texi auxiliary-material.texi chap-debugger.texi chap-inspector.texi chap-listener.texi docstrings
+SOURCES=mcclim.texi tutorials.texi reference-manual.texi developer-manual.texi extensions.texi auxiliary-material.texi chap-debugger.texi chap-inspector.texi chap-listener.texi docstrings
 
 INCLUDES=-I docstrings -I examples -I figures
 

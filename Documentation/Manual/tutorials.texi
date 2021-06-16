@@ -1,5 +1,5 @@
-@node User manual
-@chapter User manual
+@node Tutorials
+@chapter Tutorials
 
 @menu
 * Building McCLIM::
