@@ -54,6 +54,7 @@ Copyright @copyright{} 2004,2005,2006,2007,2008,2017,2019 the McCLIM hackers.
 @menu
 * Introduction::
 * Tutorials::
+* How-To Guides::
 * Reference manual::
 * Developer manual::
 * Extensions::
@@ -70,6 +71,10 @@ Copyright @copyright{} 2004,2005,2006,2007,2008,2017,2019 the McCLIM hackers.
 @c @node Tutorials
 @c @chapter Tutorials
 @include tutorials.texi
+
+@c @node How-to guides
+@c @chapter How-to guides
+@include howto-guides.texi
 
 @c @node Reference manual
 @c @chapter Reference manual

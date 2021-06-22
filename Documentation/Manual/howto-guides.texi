@@ -1,0 +1,62 @@
+@node How-To Guides
+@chapter How-To Guides
+
+@menu
+* How to build McCLIM examples and demos::
+@end menu
+
+@node How to build McCLIM examples and demos
+@section How to build McCLIM examples and demos
+
+The easiest way to try this is to use the @emph{Quicklisp} library
+manager. Assuming that Quicklisp has already been set up, trying out the
+demos is straightforward:
+
+@lisp
+(ql:quickload :clim-examples)
+(clim-demo:demodemo)
+@end lisp
+
+Alternatively, for the more courageous (which requires separately
+downloading dependencies and setting a local repository), @t{asdf}
+also works well starting from the @mcclim{} source code directory.
+
+@lisp
+(asdf:load-system "clim-examples")
+(clim-demo:demodemo)
+@end lisp
+
+@section How to run the bundled CLIM applications
+
+@table @file
+@item Apps/Listener
+
+@lisp
+(asdf:load-system "clim-listener")
+(clim-listener:run-listener)
+@end lisp
+
+@item Apps/Clouseau
+
+@lisp
+(asdf:load-system "clouseau")
+(clouseau:inspect clim:+indian-red+)
+@end lisp
+
+@item Apps/Debugger
+
+@lisp
+(asdf:load-system "clim-debugger")
+(clim-debugger:with-debugger
+ (break "simple-break"))
+@end lisp
+
+@item Apps/Functional-Geometry
+
+@lisp
+(asdf:load-system 'functional-geometry)
+(functional-geometry:run-functional-geometry)
+(clim-plot *fishes*) ; from a listener
+@end lisp
+
+@end table

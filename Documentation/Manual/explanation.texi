@@ -1,21 +1,68 @@
-@node Tutorials
-@chapter Tutorials
+@node Explanation
+@chapter Explanation
 
 @menu
-* Installing and loading McCLIM::
-* The first application::
+* Demos and examples::
+* Output recording::
 @c * Photo gallery::
-* Using incremental redisplay::
-* Using presentation types::
-* Using views::
-* Using command tables::
-* Using menu bar::
+* Commands::
+* Incremental redisplay::
+* Views::
 @end menu
 
-@node Installing and loading McCLIM
-@section Installing and loading McCLIM
+@node Building McCLIM
+@section Building McCLIM
 
-@c specify the _easiest_ steps here
+The @mcclim{} source distribution comes with a number of demos, examples
+and applications.  They are intended to showcase specific @clim{}
+features, demonstrate programming techniques or provide useful tools.
+
+These demos and applications are available in the @file{Examples} and
+@file{Apps} subdirectories of the source tree's root directory.  The
+following sections give a brief overview of the included examples and
+applications and explain how to compile, load and run them.
+Furthermore, the @file{INSTALL} file in the source tree's root directory
+contains more detailed @mcclim{} installation instructions for your Common
+Lisp implementation.
+
+@subsection Examples and demos
+
+Demos are meant to be run after loading the @t{clim-examples} system
+from the frame created with @code{(clim-demo:demodemo)}.
+
+The source code of all demos can be found in the @file{Examples}
+directory.
+
+@subsection Applications
+
+Additionally @mcclim{} has a few bundled applications:
+
+@table @file
+@item Apps/Listener
+
+@clim{}-enabled Lisp listener.  System name is @t{clim-listener}.
+@xref{Listener} for more information.
+
+@item Apps/Clouseau
+
+@clim{}-enabled Lisp inspector.  System name is
+@t{clouseau}.  @xref{Inspector} for more information.
+
+@item Apps/Debugger
+
+Common Lisp debugger implemented in @mcclim{}.  It uses the portable
+debugger interface for @t{sldb} (part of Slime project).  System name is
+@t{clim-debugger}.  @xref{Debugger} for more information.
+
+@item Apps/Functional-Geometry
+
+Peter Henderson idea, see
+@uref{http://www.ecs.soton.ac.uk/~ph/funcgeo.pdf} and
+@uref{http://www.ecs.soton.ac.uk/~ph/papers/funcgeo2.pdf} implemented in
+Lisp by Frank Buss.  @clim{} Listener interface by Rainer Joswig. System
+name is @t{functional-geometry}.
+
+@end table
 
 @node The first application
 @section The first application
