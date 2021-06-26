@@ -2,7 +2,7 @@
 @chapter Explanation
 
 @menu
-* Demos and examples::
+* Examples and demos::
 * Output recording::
 @c * Photo gallery::
 * Commands::
@@ -10,8 +10,8 @@
 * Views::
 @end menu
 
-@node Building McCLIM
-@section Building McCLIM
+@node Examples and demos
+@section Examples and demos
 
 The @mcclim{} source distribution comes with a number of demos, examples
 and applications.  They are intended to showcase specific @clim{}
@@ -24,8 +24,6 @@ applications and explain how to compile, load and run them.
 Furthermore, the @file{INSTALL} file in the source tree's root directory
 contains more detailed @mcclim{} installation instructions for your Common
 Lisp implementation.
-
-@subsection Examples and demos
 
 Demos are meant to be run after loading the @t{clim-examples} system
 from the frame created with @code{(clim-demo:demodemo)}.
