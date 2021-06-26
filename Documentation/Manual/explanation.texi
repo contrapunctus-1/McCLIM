@@ -67,49 +67,6 @@ name is @t{functional-geometry}.
 @cindex building an application
 @cindex writing an application
 
-@menu
-* A bit of terminology::
-* How CLIM applications produce output::
-* Panes and Gadgets::
-* Defining Application Frames::
-* A First Attempt::
-* Executing the Application::
-* Adding Functionality::
-* An application displaying a data structure::
-@end menu
-
-@node A bit of terminology
-@subsection A bit of terminology
-
-@clim{} was developed before the GUI toolkits widely used at the moment.
-Qt, GTK and others appeared much later than @clim{} and the difference
-of terminology reflects this.
-
-A @clim{} application is made up of a hierarchy of an @gloss{application
-frame}, @gloss{panes} and @gloss{gadgets} (gadgets are special kinds
-of panes):
-
-@table @asis
-@item application frame
-An @emph{application frame} is what would usually be called an
-application.
-
-@item panes
-At a very high level, panes describe an application frame's visual
-building blocks: a side bar, a menu bar, a table displaying a list of
-items, a text input are all panes. They can be used by application
-programmers to compose the top-level user interface of their
-applications, as well as auxiliary components such as menus and
-dialogs. In addition, panes can be more abstract such as layout panes
-such as @t{hbox}, @t{vbox} to arrange other panes horizontally or
-vertically, etc.
-
-@item gadgets
-@emph{gadgets} correspond to what other toolkits call @emph{widgets}
-and @emph{control}.  Frequently used @clim{} gadgets are
-@gadget{button}s, @gadget{slider}s, etc.
-@end table
-
 @node How CLIM applications produce output
 @subsection How CLIM applications produce output
 
