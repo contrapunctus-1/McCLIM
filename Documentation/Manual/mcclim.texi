@@ -76,6 +76,10 @@ Copyright @copyright{} 2004,2005,2006,2007,2008,2017,2019 the McCLIM hackers.
 @c @chapter How-to guides
 @include howto-guides.texi
 
+@c @c @node Explanation
+@c @c @chapter Explanation
+@include explanation.texi
+
 @c @node Reference manual
 @c @chapter Reference manual
 @include reference-manual.texi

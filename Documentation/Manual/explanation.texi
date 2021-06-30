@@ -3,7 +3,7 @@
 
 @menu
 * Examples and demos::
-* Output recording::
+* How CLIM applications produce output::
 @c * Photo gallery::
 * Commands::
 * Incremental redisplay::
@@ -62,13 +62,8 @@ name is @t{functional-geometry}.
 
 @end table
 
-@node The first application
-@section The first application
-@cindex building an application
-@cindex writing an application
-
 @node How CLIM applications produce output
-@subsection How CLIM applications produce output
+@section How CLIM applications produce output
 
 Although it is easy to imagine panes in terms of their appearance on
 screen, they are much richer: they are actually the series of
