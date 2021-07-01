@@ -24,8 +24,7 @@
 
 @menu
 * Basic terminology::
-* Defining Application Frames::
-* A First Attempt::
+* Writing very simple CLIM application::
 * Executing the Application::
 * Adding Functionality::
 * An application displaying a data structure::
@@ -72,29 +71,10 @@ panes are the layout panes such as @pane{hbox}, @pane{vbox},
 @cindex pane
 @cindex gadget
 
-@node Defining Application Frames
-@subsection Defining Application Frames
+@node Writing very simple CLIM application
+@subsection Writing very simple CLIM application
 
-Each @clim{} application is defined by an @gloss{application frame}.  An
-application frame is an instance of the class @class{application-frame}.
-As a @clim{} user, you typically define a class that inherits from the
-class @class{application-frame}, and that contains additional slots
-needed by your application.  It is considered good style to keep all
-your application-specific data in slots in the application frame (rather
-than, say, in global variables), and to define your application-specific
-application frame in its own package.
-@cindex application frame
-
-The usual way to define an application frame is to use the macro
-@fmacro{define-application-frame}.  This macro works much like
-@fmacro{defclass}, but also allows you to specify the hierarchy of
-@gloss{panes} and @gloss{gadgets} to use.
-
-@node A First Attempt
-@subsection A First Attempt
-
-Let us define a very primitive @clim{} application.  For that, let us put
-the following code in a file:
+Let us put the following code in a file:
 
 @lisp
 @include ex1.lisp
@@ -113,48 +93,6 @@ package as far as the user is concerned.
 
 In our example, we export the symbol that corresponds to the main
 function to start our application, here called @t{run-my-first-app}.
-
-The most important part of the code in our example is the definition
-of the application-frame.  In our example, we have defined an
-application frame called @t{my-first-clim-app}, which becomes a CLOS
-class that automatically inherits from some standard @clim{} application
-frame class.
-
-The second argument to @fmacro{define-application-frame} is a list of
-additional superclasses from which you want your application frame to
-inherit.  In our example, this list is empty, which means that our
-application frame only inherits from the standard @clim{} application
-frame.
-
-The third argument to @fmacro{define-application-frame} is a list of
-CLOS slots to be added to any instance of this kind of application
-frame.  These slots are typically used for holding all
-application-specific data.  The current instance of the application
-frame will always be the value of the special variable
-@t{*application-frame*},
-@vindex @symbol{*application-frame*,clim}
-so that the values of these slots can be accessed.  In our example, we
-do not initially have any further slots.
-
-The rest of the definition of an application frame contains additional
-elements that @clim{} will allow the user to define.  In our example, we
-have two additional (mandatory) elements: @t{:panes} and @t{:layouts}.
-
-The @t{:panes} element defines a collection of @clim{} panes that each
-instance of your application may have.  Each pane has a name, a type,
-and perhaps some options that are used to instantiate that particular
-type of pane.  Here, we have a pane called @t{my-interactor} of type
-@t{:interactor} with a height of 400 units and a width of 600 units.  In
-@mcclim{}, the units are initially physical units (number of pixels) of the
-native windowing system.
-
-The @t{:layouts} element defines one or more ways of organizing the
-panes in a hierarchy.  Each layout has a name and a description of a
-hierarchy.  In our example, only one layout, named @t{my-default}, is
-defined.  The layout called @t{my-default} is the one that is used by
-@clim{} at startup.  In our example, the corresponding hierarchy is
-trivial, since it contains only the one element @t{my-interactor},
-which is the name of our only pane.
 
 @node Executing the Application
 @subsection Executing the Application

@@ -185,32 +185,15 @@ The usual way to define an application frame is to use the macro
 @node A First Attempt
 @subsection A First Attempt
 
-Let us define a very primitive @clim{} application.  For that, let us put
-the following code in a file:
+Let us consider our first example the tutorial.
 
 @lisp
 @include ex1.lisp
 @end lisp
 
-As we can see in this example, we have put our application in a separate
-package, here a package named @t{APP}.  While not required, putting the
-application in its own package is good practice.
-
-The package for the application uses two packages: @package{CLIM} and
-@package{CLIM-LISP}.  The @package{CLIM} package is the one that
-contains all the symbols needed for using @clim.  The @package{CLIM-LISP}
-package replaces the @package{COMMON-LISP} package for @clim{}
-applications.  It is essentially the same as the @package{COMMON-LISP}
-package as far as the user is concerned.
-
-In our example, we export the symbol that corresponds to the main
-function to start our application, here called @t{run-my-first-app}.
-
-The most important part of the code in our example is the definition
-of the application-frame.  In our example, we have defined an
-application frame called @t{my-first-clim-app}, which becomes a CLOS
-class that automatically inherits from some standard @clim{} application
-frame class.
+We have defined an application frame called @t{my-first-clim-app}, which
+becomes a CLOS class that automatically inherits from some standard
+@clim{} application frame class.
 
 The second argument to @fmacro{define-application-frame} is a list of
 additional superclasses from which you want your application frame to
@@ -261,8 +244,7 @@ application.
 
 To execute the application, load the file containing your code (possibly
 after compiling it) into your running Lisp system.  Then start the
-application.  Our example can be started by typing
-@t{(my-first-app:run-my-first-app)}.
+application.
 
 @node Adding Functionality
 @subsection Adding Functionality
